@@ -12,7 +12,7 @@ import {
 import { AnimalsService } from './animals.service';
 import { CreateAnimalDto } from './dto/create-animal.dto';
 import { UpdateAnimalDto } from './dto/update-animal.dto';
-import { FilterAnimalDto } from './dto/filter-animal.dto';
+import { QueryAnimalsDto } from './dto/query-animals.dto';
 
 @Controller('animals')
 export class AnimalsController {
@@ -23,10 +23,11 @@ export class AnimalsController {
     return this.animalsService.create(dto);
   }
 
-  @Get()
-  findAll(@Query() filters: FilterAnimalDto) {
-    return this.animalsService.findAll(filters);
+   @Get()
+  findAll(@Query() query: QueryAnimalsDto) {
+    return this.animalsService.findAll(query);
   }
+  
 
   // ParseUUIDPipe valida que :id sea un UUID válido
   @Get(':id')
