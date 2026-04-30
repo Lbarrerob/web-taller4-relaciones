@@ -70,7 +70,7 @@ export class AnimalsService {
 
     return { data, total, page, limit };
   }
-
+ 
   async findOne(id: string) {
     const animal = await this.animalRepo.findOne({
       where: { id },
