@@ -7,11 +7,11 @@ import {
   Param,
   Delete,
   ParseUUIDPipe,
+  Query
 } from '@nestjs/common';
 import { AnimalsService } from './animals.service';
 import { CreateAnimalDto } from './dto/create-animal.dto';
 import { UpdateAnimalDto } from './dto/update-animal.dto';
-import { Controller, Get, Post, Body, Patch, Param, Delete, ParseUUIDPipe, Query } from '@nestjs/common';
 import { FilterAnimalDto } from './dto/filter-animal.dto';
 
 @Controller('animals')
